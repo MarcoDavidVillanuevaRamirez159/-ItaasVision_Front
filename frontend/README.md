@@ -1,12 +1,48 @@
-# React + Vite
+# Dashboard Camera (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación React + Vite para visualizar el dashboard de cámaras.
 
-Currently, two official plugins are available:
+## Requisitos
+- Node.js ≥ 18
+- npm ≥ 9
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
+- React 19, Vite 7
+- React Router 6
+- Tailwind CSS (v4) + PostCSS
+- Heroicons
 
-## Expanding the ESLint configuration
+## Scripts
+- Desarrollo: `npm run dev` (http://localhost:5173)
+- Build producción: `npm run build`
+- Preview build: `npm run preview`
+- Lint: `npm run lint`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estructura
+- `src/components/` Sidebar, Topbar, Card, CameraCard
+- `src/pages/` Home, Cámaras, Alertas, Ajustes, NotFound
+- `src/styles/` global.css (estilos base)
+- `src/index.css` Tailwind
+- `public/` favicon y estáticos
+
+## Personalización rápida
+- Logo de la esquina: `src/logo.png` (PNG con fondo transparente)
+- Favicon: `public/favicon.png`
+- Colores/base: `tailwind.config.js`
+
+## Funciones actuales
+- Layout a pantalla completa (botón en la barra superior)
+- Sidebar compacta por iconos
+- Tarjetas de estado y grilla de cámaras (placeholders)
+
+## Próximos pasos (sugerencias)
+- Integrar streams (HLS mediante `<video>` o reproductor hls.js)
+- Estado global (Zustand/Redux) para cámaras y alertas
+- Internacionalización (es/en)
+- Autenticación y roles
+- Pruebas (Vitest/RTL)
+
+## Convenciones
+- Componentes en PascalCase
+- Hooks en `src/hooks/` (prefijo `use`)
+- Servicios HTTP en `src/services/`
